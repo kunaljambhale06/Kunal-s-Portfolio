@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://sets.hugeicons.com/YOUR-SET-ID.css" crossorigin="anonymous">
+    <!--<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+     Place in <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "H3M-h7G9wmcyrbQyT",
+            });
+        })();
+    </script>
+
+</head>
+
+<body>
+    <section id="landpage">
+        <nav>
+            <div class="rightnav__homebtn">
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    "></a>
+                </li>
+            </div>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#project-section" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#certficate-section" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    ">Certifications</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="nav__link--anchor
+                     link__hover-effect
+                     link__hover-effect--black
+                    "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hello There!</h1>
+                <h1 class="title orange">Myself Kunal.</h1>
+                <p class="header__para">
+                    I am a <b class="orange">software engineering student</b> with<br> strong fundamentals in
+                    development <br> as well as problem
+                    solving skills.
+                    <br>
+                    Here is little bit more <b class="orange click" onclick="toggleModal()">about me</b>
+                </p>
+                <div class="social__list">
+                    <a href="" class="social__link click">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/kunaljambhale06" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" class="social__link click">
+                        <i class="fa-solid fa-file"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#project-section" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here is a bit more about me</h3>
+                <h4 class="modal__sub-title modal__sub-title--about"></h4>
+                <p class="modal__para">
+                    I am a 21 years old Software engineer. And make use of break tag and make some text orange with help
+                    of class orange.Use your own info here and create this text.
+                    <br>
+                    Explain positive things about like problem solving skills etc etc.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="" srcset="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="" srcset="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="" srcset="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="" srcset="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a <span class="orange">chat!</span>
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button class="form__submit" id="contact__submit">
+                        Submit Form!
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message. Looking forward to speak with you as early as possible.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project-section">
+        <div class="row">
+            <div class="project-container">
+                <div class="project-heading">Here are some of my <br><span class="orange">Projects.</span></div>
+                <ul class="project-list">
+                    <li class="project">
+                        <div class="project-wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project-image">
+                            <div class="project-wrapper-bg">
+                                <div class="project-description">
+                                    <div class="project-description-heading">Movie App</div>
+                                    <div class="project-description-sub-heading">React, Redux, Firebase, HTML, CSS, JS
+                                    </div>
+                                    <div class="project-description-info">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Voluptatem adipisci cum et officia voluptates! Consequuntur
+                                        quisquam alias nostrum reiciendis minima tenetur optio voluptate dicta ex et
+                                        dolorum, autem placeat iusto rerum iure nisi impedit ab velit non dolor
+                                        blanditiis, in soluta. Facere earum odit at ex eius totam praesentium mollitia?
+                                    </div>
+                                    <div class="project-description-links">
+                                        <a href="" class="project-description-link"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="" class="project-description-link"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-wrapper">
+                            <img src="./assets/projectmain.png" alt="" class="project-image">
+                            <div class="project-wrapper-bg">
+                                <div class="project-description">
+                                    <div class="project-description-heading">Movie App</div>
+                                    <div class="project-description-sub-heading">React, Redux, Firebase, HTML, CSS, JS
+                                    </div>
+                                    <div class="project-description-info">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Voluptatem adipisci cum et officia voluptates! Consequuntur
+                                        quisquam alias nostrum reiciendis minima tenetur optio voluptate dicta ex et
+                                        dolorum, autem placeat iusto rerum iure nisi impedit ab velit non dolor
+                                        blanditiis, in soluta. Facere earum odit at ex eius totam praesentium mollitia?
+                                    </div>
+                                    <div class="project-description-links">
+                                        <a href="" class="project-description-link"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="" class="project-description-link"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-wrapper">
+                            <img src="./assets/blinker mockup.png" alt="" class="project-image">
+                            <div class="project-wrapper-bg">
+                                <div class="project-description">
+                                    <div class="project-description-heading">Movie App</div>
+                                    <div class="project-description-sub-heading">React, Redux, Firebase, HTML, CSS, JS
+                                    </div>
+                                    <div class="project-description-info">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Voluptatem adipisci cum et officia voluptates! Consequuntur
+                                        quisquam alias nostrum reiciendis minima tenetur optio voluptate dicta ex et
+                                        dolorum, autem placeat iusto rerum iure nisi impedit ab velit non dolor
+                                        blanditiis, in soluta. Facere earum odit at ex eius totam praesentium mollitia?
+                                    </div>
+                                    <div class="project-description-links">
+                                        <a href="" class="project-description-link"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="" class="project-description-link"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="certficate-section">
+        <div class="row">
+            <div class="certificate-container">
+                <div class="certificate-heading">Here are some of my<br><span class="orange">Certifications</span></div>
+                <ul class="certificate-list">
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="certificate">
+                        <div class="certificate-wrapper">
+                            <img src="/Assets/Basics of buisness communication.png" alt="" class="certificate-image">
+                            <div class="certificate-wrapper-bg">
+                                <div class="certificate-description">
+                                    <h2 class="certificate-description-heading">Certificate Title</h2>
+                                    <p class="certificate-description-info">Some description about certificate.</p>
+                                    <a href="#" class="certificate-description-link">
+                                        <i class="fa-solid fa-file"></i>
+                                        View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__row">
+                <div class="footer__text">
+                    <h4 class="final__text">Thank You For Visiting The Website ❤</h4>
+                </div>
+                <div class="footer__social--list">
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect">GitHub</a>
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect">LinkedIn</a>
+                    <a href="./Assets/" target="_blank" class="footer__social--link link__hover-effect">Resume</a>
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect">E-Mail</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
