@@ -1,6 +1,4 @@
-//service id = service_hre3epu
-//template id = template_e6y1rwb
-//ApI key = 4cNZPhPvhdeokjYlM
+
 let contrastToggle = false;
 function toggleContrast(){
     contrastToggle = !contrastToggle;
@@ -63,5 +61,6 @@ function toggleModal() {
     document.body.classList.add("modal--open");
 
 }*/
+
 
 
